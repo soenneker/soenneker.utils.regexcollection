@@ -15,4 +15,7 @@ public partial class RegexCollection
 
     [GeneratedRegex(@"([-_]){2,}")]
     public static partial Regex DoubleOccurrencesOfDashUnderscore();
+
+    [GeneratedRegex(@"([^:]+://[^?]+)(/[^/?#]+)(.*$)")]
+    public static partial Regex UriLastSegment();
 }
