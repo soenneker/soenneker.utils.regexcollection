@@ -3,7 +3,7 @@
 namespace Soenneker.Utils.RegexCollection;
 
 /// <summary>
-/// A collection of regular expressions that are generated at compile time
+/// A collection of regular expressions that are generated at compile time.
 /// </summary>
 public partial class RegexCollection
 {
@@ -18,4 +18,7 @@ public partial class RegexCollection
 
     [GeneratedRegex(@"([^:]+://[^?]+)(/[^/?#]+)(.*$)")]
     public static partial Regex UriLastSegment();
+
+    [GeneratedRegex(@"(?:https?:\/\/|www\.)[^ \f\n\r\t\v\]]+\b")]
+    public static partial Regex Url();
 }
