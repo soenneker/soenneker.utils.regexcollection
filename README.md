@@ -8,7 +8,7 @@
 ## Installation
 
 ```
-Install-Package Soenneker.Utils.RegexCollection
+dotnet add package Soenneker.Utils.RegexCollection
 ```
 
 ## Usage
