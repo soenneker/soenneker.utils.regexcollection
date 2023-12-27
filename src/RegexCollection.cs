@@ -19,6 +19,6 @@ public partial class RegexCollection
     [GeneratedRegex(@"([^:]+://[^?]+)(/[^/?#]+)(.*$)")]
     public static partial Regex UriLastSegment();
 
-    [GeneratedRegex(@"(?:https?:\/\/|www\.)[^ \f\n\r\t\v\]]+\b")]
+    [GeneratedRegex(@"(?:https?:\/\/|www\.)[^ \f\n\r\t\v\]\[]+\b")]
     public static partial Regex Url();
 }
