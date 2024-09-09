@@ -81,4 +81,17 @@ public partial class RegexCollection
     /// </remarks>
     [GeneratedRegex(@"^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$")]
     public static partial Regex DnsHostname();
+
+    /// <summary>
+    /// A compiled regex pattern to match common spintax format: 
+    /// <code>{{ RANDOM | option1 | option2 | ... }}</code>. 
+    /// This pattern captures multiple options separated by pipes (`|`) within 
+    /// curly braces and the keyword 'RANDOM'.
+    /// </summary>
+    /// <returns>
+    /// A <see cref="Regex"/> object that can be used to process and replace spintax 
+    /// with random selections from the options.
+    /// </returns>
+    [GeneratedRegex(@"\{\{\s*RANDOM\s*\|\s*(.*?)\s*\}\}")]
+    public static partial Regex Spintax();
 }
