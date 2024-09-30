@@ -94,4 +94,21 @@ public partial class RegexCollection
     /// </returns>
     [GeneratedRegex(@"\{\{\s*RANDOM\s*\|\s*(.*?)\s*\}\}")]
     public static partial Regex Spintax();
+
+    /// <summary>
+    /// Generates a regular expression that matches a string containing a city, state abbreviation, 
+    /// and a 5-digit or 9-digit postal code (ZIP code).
+    /// </summary>
+    /// <returns>
+    /// A <see cref="Regex"/> object that matches strings formatted as "CityName StateAbbreviation PostalCode".
+    /// Example: "Los Angeles CA 90001" or "Los Angeles CA 90001-1234".
+    /// </returns>
+    /// <remarks>
+    /// The regular expression pattern:
+    /// - Matches any city name followed by whitespace.
+    /// - Expects a two-letter state abbreviation.
+    /// - Matches a 5-digit postal code or a 9-digit postal code in the form "12345-1234".
+    /// </remarks>
+    [GeneratedRegex(@"^(.*)\s+([A-Za-z]{2})\s+(\d{5}(?:-\d{4})?)$")]
+    public static partial Regex CityStatePostal();
 }
