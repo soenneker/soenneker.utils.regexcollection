@@ -111,4 +111,23 @@ public partial class RegexCollection
     /// </remarks>
     [GeneratedRegex(@"^(.*)\s+([A-Za-z]{2})\s+(\d{5}(?:-\d{4})?)$")]
     public static partial Regex CityStatePostal();
+
+    /// <summary>
+    /// Provides a compiled regular expression that matches the opening of a Markdown-style code block fence.
+    /// </summary>
+    /// <returns>
+    /// A <see cref="Regex"/> that matches code block markers of the form <c>```</c> followed optionally by a language identifier and a newline.
+    /// For example: <c>```csharp</c>, <c>``` js</c>, or simply <c>```</c>.
+    /// </returns>
+    /// <remarks>
+    /// The pattern used is <c>^```[a-zA-Z]*\s*\n?</c>, which matches from the beginning of a line:
+    /// <list type="bullet">
+    ///   <item><description><c>```</c> – the code block fence</description></item>
+    ///   <item><description><c>[a-zA-Z]*</c> – optional language identifier</description></item>
+    ///   <item><description><c>\s*</c> – optional whitespace</description></item>
+    ///   <item><description><c>\n?</c> – optional newline</description></item>
+    /// </list>
+    /// </remarks>
+    [GeneratedRegex(@"^```[a-zA-Z]*\s*\n?")]
+    public static partial Regex MarkdownCodeFence();
 }
