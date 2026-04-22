@@ -1,10 +1,9 @@
-using Xunit;
 
 namespace Soenneker.Utils.RegexCollection.Tests;
 
 public class RegexCollectionTests
 {
-    [Fact]
+    [Test]
     public void Default()
     {
     }
