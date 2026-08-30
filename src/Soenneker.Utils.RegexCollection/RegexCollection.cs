@@ -26,7 +26,7 @@ public partial class RegexCollection
     /// This regex is useful for sanitizing strings to contain only lowercase letters, digits, spaces, hyphens, and underscores.
     /// It can be used for inputs where special characters are not allowed, ensuring a certain level of data consistency.
     /// </remarks>
-    [GeneratedRegex(@"[^a-z0-9\s-_]")] 
+    [GeneratedRegex(@"[^a-z0-9\s_-]")]
     public static partial Regex AlphaNumericAndDashUnderscore();
 
     /// <summary>
